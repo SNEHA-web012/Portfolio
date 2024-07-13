@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Add your JavaScript code here for interactivity
+        const form = document.querySelector("form");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Thank you for contacting us!");
+        });
+    
+        // Scroll animation for navigation links
+        const links = document.querySelectorAll('nav ul li a');
+        for (const link of links) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+    });
+    </script>
+    <style>
+        body {
+            background-image: linear-gradient(to right top, #ffffff, #e9e2fe, #d6c5fc, #c6a7f6, #b888ef);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background: #9406fa;
+    color: #0b0b0b;
+    padding: 10px 0;
+    animation: slideInDown 1s ease-out;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li:hover{
+ background-color:#2002e279
+}
+
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    color: #131111;
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeIn 2s ease-in;
+    
+}
+
+#hero h2 {
+    margin: 0 0 10px;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+#hero p {
+    margin: 0 0 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-weight: bolder;
+}
+
+.btn {
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#courses .course-list {
+    display:flex;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 20px;
+ justify-content:space-around;
+ animation: fadeInUp 1s ease-out;
+}
+
+#courses .course-item {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+#courses .course-item:hover {
+    transform: translateY(-10px);
+    opacity: 1;
+}
+
+#about, #contact {
+    padding: 40px 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    animation: slideInUp 1s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+#contact form{
+    display: flex;
+    flex-direction:column;
+    width: 60%;
+}
+.rightsection{
+    width:50%;
+}
+.container1{
+    display: flex;
+    flex-direction: row;
+}
+#about{
+ height:370px;
+ width:85%;
+ overflow:auto;
+ font-weight: bolder;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ text-align:left;
+}
+#getstart h1{
+   text-align: center;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.head img{
+    height: 100px;
+    width:100px;
+    border:black  solid 2px;
+    border-radius: 50%;
+}
+.head img:hover{
+    opacity:0.5;
+    
+}
+.head h1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5rem;
+}
+.content1{
+    display: flex;
+    flex-direction:row;
+}
+.content1 img{
+    height: 450px;
+    width:450px ;
+}
+.content1 img:hover{
+    opacity:0.3;
+    width:550px;
+}
+.course-item img{
+    height:200px;
+    width:350px;
+}
+.content2{
+    padding:5px;
+    height:350px;
+    width:600px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="head">
+            
+            <img src="https://image.pngaaa.com/481/2517481-middle.png" alt="image">
+            <h1>2X Brains</h1>
+        </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h2>Welcome to the Future of Learning...</h2>
+                <div class="content1">
+                <div class="left">
+                
+                <p>Discover a variety of courses to enhance your skills.</p>
+                <p>We offer a robust selection of professional courses designed to help you advance in your career, acquire new skills, and stay competitive in the ever-evolving job market. Our professional courses are crafted by industry leaders and experts to ensure you gain practical, real-world knowledge that you can immediately apply to your job.</p>
+               
+                <a href="#courses" class="btn">Explore Courses</a>
+                <a href="#getstart" class="btn">Getting Started</a>
+               
+            </div>
+            <div class="right">
+                <img src="https://www.scnsoft.com/education-industry/elearning-portal/                elearning-portals-cover-picture.svg" alt="sneha">
+            </div>
+        </div>
+            </div>
+        </section>
+        <section id="getstart">
+            <h1>Start Your FREE trial course today!!</h1>
+            <p>  1. Sign Up:
+         Create your free account.</p>
+         <p>2. Explore Courses:
+           Find courses that match your interests.</p>
+           <p> 3. Start Learning:
+           Enroll and track your progress.</p>
+           <p> 4. Earn Certificates:
+           Complete courses and showcase your achievements.</p> 
+        </section>
+
+        <section id="courses">
+            <div class="container">
+                <h2>Our Courses</h2>
+                <div class="course-list">
+                    <div class="course-item">
+                        <div class="content2">
+                        <img src="https://cdn.imgbin.com/19/14/24/imgbin-website-development-web-design-web-developer-web-application-development-html-business-mind-A6mar30NZrv986TstN32xmKtd.jpg" alt="webdev">
+                        <h3>Web Development</h3>
+                        <p>Learn HTML, CSS, JavaScript, and more.</p>
+                        <a href="#contact" class="btn">Learn More</a>
+                    </div>
+                    </div>
+                    <div class="course-item">
+                        <div class="content2">
+                        <img src="https://www1.onpassive.com/blog/wp-content/uploads/2022/08/19155712/Data-Science-focuses-on-algorithms.jpg" alt="ds">
+                        <h3>Data Science</h3>
+                        <p>Master Python, R, and data analysis techniques.</p>
+                        <a href="#contact" class="btn">Learn More</a>
+                    </div>
+                </div>
+                    <div class="course-item">
+                        <div class="content2">
+                        <img src="https://spng.pngfind.com/pngs/s/11-117479_graphic-design-services-in-nigeria-graphic-design-images.png" alt="gd">
+                        <h3>Graphic Design</h3>
+                        <p>Design stunning graphics with Photoshop and Illustrator.</p>
+                        <a href="#contact" class="btn">Learn More</a>
+                    </div>
+                </div>
+                    <div class="course-item">
+                        <div class="content2">
+                        <img src="https://www.itsecurityguru.org/wp-content/uploads/2018/02/Blockchain-Funds.png" alt="bd">
+                        <h3>Block chain Development</h3>
+                        <p> Understand blockchain technology and its applications in cryptocurrencies and beyond.</p>
+                        <a href="#contact" class="btn">Learn More</a>
+                    </div>
+                </div>
+                    <div class="course-item">
+                        <div class="content2">
+                        <img src="https://img.freepik.com/premium-vector/iot-internet-things-devices-connectivity-concepts-network-flat-style-with-people_194782-1655.jpg" alt="iot">
+                        <h3>Internet of Things (IoT) and Smart Devices</h3>
+                        <p>Discover how to connect and control smart devices using IoT technologies.</p>
+                        <a href="#contact" class="btn">Learn More</a>
+                    </div>
+                </div>
+                    <div class="course-item">
+                        <div class="content2">
+                        <img src="https://banner2.cleanpng.com/20180203/zke/kisspng-cloud-computing-internet-application-software-serv-cloud-computing-png-file-5a756d356dbbb8.5027257215176451094495.jpg" alt="hahj">
+                        <h3>Cloud Computing with AWS, Azure, and Google Cloud</h3>
+                        <p> Explore cloud infrastructure, services, and deployment models on major cloud platforms.</p>
+                        <a href="#contact" class="btn">Learn More</a>
+                    </div>
+                </div>
+                    <div class="course-item">
+                        <div class="content2">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3T3r_5HksfQowfQoXkmD_Y-QD_sOfnMiXww&s" alt="ai">
+                        <h3>Artificial Intelligence and Deep Learning Specialization</h3>
+                        <p>Dive into AI concepts and deep learning algorithms to develop intelligent systems.</p>
+                        <a href="#contact" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <div class="content2">
+                    <img src="https://img.lovepik.com/element/45003/5669.png_300.png" alt="bigdata">
+                    <h3>Big Data Analytics and Hadoop Ecosystem</h3>
+                    <p>Analyze large datasets using Hadoop and other big data tools and techniques.</p>
+                    <a href="#contact" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="course-item">
+                <div class="content2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRizJ3UIyInJPlJujonGrYig_oKT_Ica-ioWQ&s" alt="cpp">
+                <h3>Advanced C++ Programming and Algorithms</h3>
+                <p>Deepen your understanding of C++ and learn advanced algorithms.</p>
+                <a href="#contact" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container">
+                <h2>Why Choose Us ?</h2>
+                <p>Our mission is to provide high-quality education accessible to everyone, everywhere.</p>
+                <p>1. Comprehensive Course Library: </p>
+                    <p>Explore a wide range of courses across various disciplines, from technology and business to arts and humanities. Our courses are developed by industry experts and leading educators to ensure you receive high-quality, up-to-date content.
+                  <p> 2. Flexible Learning:</p>
+                  <p> Learn at your own pace, on your schedule. Our platform is accessible 24/7, allowing you to balance your studies with work, family, and other commitments.</p>
+                  <p>3. Interactive and Engaging: </p>
+                 <p>  Our courses are designed to be interactive, with multimedia content, quizzes, and hands-on projects that make learning fun and effective. Participate in discussions, collaborate with peers, and receive feedback from instructors.</p>
+                 <p>  4. Personalized Learning Paths: </p>
+                  <p> Customize your learning experience with personalized recommendations and curated learning paths that align with your goals and interests.</p>
+                 <p>  5.Certifications and Credentials:</p>
+                 <p>   Earn certificates and digital badges that you can showcase on your resume and LinkedIn profile, helping you advance your career and achieve your professional goals.</p>
+                 <p>6. Supportive Community: 
+                 </p>Join a global community of learners. Engage in forums, join study groups, and attend virtual events to connect with like-minded individuals and share knowledge</p>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2>Join Us Today !</h2>
+                <h3>Embark on a journey of knowledge and growth. Join  today and unlock your potential. Together, we can achieve great things.</h3>
+               <div class="container1">
+                <div class="rightsection">
+                    <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <label for="message">course you want to join</label>
+                    <textarea id="message" name="message"></textarea>
+                    <button type="submit" class="btn">sign up</button>
+                </form>
+            </div>
+            <div class="leftsection">
+                <h3>Contact Us!</h3>
+                <p> <i class=" bi-envelope">221220058@nitdelhi.ac.in</i></p>
+                <p><i class="bi-linkedin">snehalinkedin.com</i></p>
+            </div>
+            </div>
+        </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 E-Learning Platform. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
